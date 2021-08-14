@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/content_home">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <Button
+        android:id="@+id/edubtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Education"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/nav_host_fragment"
+        app:layout_constraintStart_toStartOf="@id/nav_host_fragment"
+        android:background="@drawable/rounded_corner"/>
+    <Button
+        android:id="@+id/healthbtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Healthcare"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/nav_host_fragment"
+        app:layout_constraintStart_toStartOf="@id/nav_host_fragment"
+        android:background="@drawable/rounded_corner"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
